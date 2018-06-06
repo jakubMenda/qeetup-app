@@ -1,11 +1,15 @@
 import React from 'react';
 import './style.css';
 
-export default (props) => {
-    return (
-        <div className='list-group-item'>
-            <strong>{props.name}</strong>
-            <div onClick={() => { props.onRemove() }} className='delete-btn'>X</div>
-        </div>
-    );
-};
+class ListItem extends React.Component {
+    render() {
+        return (
+            <div className="list-group-item">
+                <strong>{this.props.name}</strong>
+                <div onClick={this.props.onRemove} className="delete-btn">X</div>
+            </div>
+        );
+    }
+}
+
+export default ListItem;

@@ -19,7 +19,9 @@ class App extends Component {
       <div className="App">
           <div className="container">
               <div className='col-xs-12'>
-                <Form onSubmit={(name) => { this.setState({ items: [{ id: i, name: name }, ...this.state.items], i: i + 1 });}} />
+                <Form onSubmit={(name) => {
+                    this.setState({ items: [{ id: i, name: name }, ...this.state.items], i: i + 1 });
+                }} />
                 <List
                     items={items}
                     removeItem={(id) => {
